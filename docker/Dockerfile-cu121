@@ -3,8 +3,7 @@ ARG from=nvidia/cuda:${CUDA_VERSION}-cudnn8-devel-ubuntu20.04
 
 FROM ${from} as base
 
-RUN <<EOF
-apt update -y && apt upgrade -y && apt install -y --no-install-recommends  \
+RUN apt update -y && apt upgrade -y && apt install -y --no-install-recommends  \
     git \
     git-lfs \
     python3 \
@@ -13,7 +12,6 @@ apt update -y && apt upgrade -y && apt install -y --no-install-recommends  \
     wget \
     vim \
 && rm -rf /var/lib/apt/lists/*
-EOF
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
