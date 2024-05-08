@@ -70,7 +70,7 @@ EOF
 
 FROM bundle_flash_attention as final
 
-COPY ../examples/sft/* ./
-COPY ../examples/demo/* ./
+COPY examples/sft/* ./
+COPY examples/demo/* ./
 
 EXPOSE 80
